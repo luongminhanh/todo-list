@@ -1,0 +1,33 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: black;
+    color: hsl(200, 100%, 90%);
+  }
+
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .App p {
+    font-size: 30px;
+  }
+  .todo-child {
+    display: flex;
+    gap: 5px;
+    margin-top: 20px;
+    border-bottom: 1px solid;
+    padding-bottom: 10px;
+  }
+.app-logo {
+  width: 100px;
+  height: 100px;
+}
