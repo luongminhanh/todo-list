@@ -20,13 +20,7 @@
   .App p {
     font-size: 30px;
   }
-  .todo-child {
-    display: flex;
-    gap: 5px;
-    margin-top: 20px;
-    border-bottom: 1px solid;
-    padding-bottom: 10px;
-  }
+  
 .app-logo {
   width: 100px;
   height: 100px;

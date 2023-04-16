@@ -30,7 +30,7 @@ const App = () => {
           pauseOnHover={false}
           theme="light"
         />
-        <p>Todo App with ReactJS</p>
+        <p>To-do List</p>
         <ListTodo />
       </div>
     </>

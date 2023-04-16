@@ -18,15 +18,18 @@ const AddTodo = ({ addNewTask }) => {
     addNewTask(todo);
     setTask('');
   }
-  
+
   return (
     <div>
       <input
+        className="input-type-task"
         type="text"
         value={task}
         onChange={(e) => handleOnChangeToAdd(e)}
       />
-      <button onClick={handleClickAdd}>Add Task</button>
+      <button 
+      className='btn add-task'
+      onClick={handleClickAdd}>Add Task</button>
     </div>
   )
 

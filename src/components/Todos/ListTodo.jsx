@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './ListTodo.scss'
+// import './ListTodo.scss'
 import AddTodo from './AddTodo';
 import { toast } from 'react-toastify';
 
@@ -35,7 +35,7 @@ const ListTodo = () => {
       return;
     }
   }
-  
+
   const isEditTodoEmpty = Object.keys(editTodo).length === 0;
 
   const handleOnChangeEdit = (e) => {
@@ -50,10 +50,11 @@ const ListTodo = () => {
       <div className='list-todo-content'>
         {listTodo.length > 0 ?
           listTodo.map((todo, index) => {
-            return <div key={todo.id}>
+            return <div key={todo.id} className='todo-child'>
 
               {isEditTodoEmpty === false && todo.id === editTodo.id ?
                 <input
+                  className='input edit-save'
                   type="text"
                   value={editTodo.title}
                   onChange={handleOnChangeEdit}
@@ -62,11 +63,15 @@ const ListTodo = () => {
                 <span>{index + 1} - {todo.title}</span>
               }
 
-              <button onClick={() => handleClickEditSave(todo)}>
+              <button 
+              onClick={() => handleClickEditSave(todo)}
+              className='btn edit-save'>
                 {isEditTodoEmpty === false && todo.id === editTodo.id ? "Save" : "Edit"}
               </button>
 
-              <button onClick={() => handleClickDelete(todo.id)}>
+              <button 
+              onClick={() => handleClickDelete(todo.id)}
+              className='btn delete'>
                 Delete
               </button>
             </div>
