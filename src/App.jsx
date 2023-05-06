@@ -1,39 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import ListTodo from './components/Todos/ListTodo';
-import './styles.css'
-import './App.css'
-import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import videoBg from '../src/assets/videoBg.mp4';
+import NavBar from './components/navbar/NavBar'
+import NavBarNotSignIn from './components/navbar/NavBarNotSignIn'
+import { Route, Routes } from 'react-router-dom';
+import Home from './components/page/Home';
+import SignIn from './components/page/SignIn';
 
 const App = () => {
-  
   return (
-    <>
-      <div className='overlay'></div>
-      <video src={videoBg} autoPlay loop muted />
-      <div className='app-content'>
-        <header className='app-header'>
-          <img src={reactLogo} className='logo' />
-        </header>
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover={false}
-          theme="light"
-        />
-        <p>To-do List</p>
-        <ListTodo />
-      </div>
-    </>
+    <Routes>
+      <Route path='/' element={
+        <Home/>
+      }>
+        <Route path='/signin' element={<NavBar/>}/>
+        <Route path='/notsignin' element={<NavBarNotSignIn />}/>
+      </Route>
+      
+      <Route path='/login' element={<SignIn />}></Route>
+    </Routes>
   )
 }
 

@@ -1,0 +1,127 @@
+@import '../scss/mixins';
+
+.container {
+    margin: auto; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // flex-direction: column;
+    height: 1100px;
+    @include large-screens() {
+        height: 1900px;
+    }
+    @include tiny-screens() {
+       height: 1700px;
+    }
+    width: 100vw;
+    h1 {
+        font-weight: bold;
+        font-size: 50px;
+    }
+    span {
+        margin-bottom: 50px;
+    }
+}
+
+.wrapper {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    h1 {
+        @include tiny-screens() {
+            font-size: 30px;
+        }
+    }
+    span {
+        @include tiny-screens() {
+            width: 75%;
+            font-size: 15px;;
+        }
+    }
+}
+
+.feature-list-item {
+    width: 70%;
+    gap: 7rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    @include large-screens() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    @include tiny-screens() {
+        gap: 3rem;
+    }
+}
+
+.feature-item {
+    position: relative;
+    padding: 30px;
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+
+    &-img-background {
+        position: absolute;
+        left: 50px;
+        @include tiny-screens() {
+            width: 75%;
+        }
+    }
+
+    &-img-main {
+        position: absolute;
+        left: -40px;
+        top: 30%;
+        object-fit: cover;
+        @include tiny-screens() {
+            width: 40%;
+        }
+    }
+
+    &-content {
+        position: absolute;
+        top: 80px;
+        left: 45%;
+        @include tiny-screens() {
+            left: 40%;
+            top: 60px;
+        }
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.feature-item-content {
+    h1 {
+        font-size: 25px;
+        @include tiny-screens() {
+            font-size: 15px;
+        }
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    p {
+        @include tiny-screens() {
+            font-size: 12px;
+            width: 75%;
+        }
+    }
+    .learn-more {
+        display: flex;
+        align-items: center;
+        gap: 1.5rem;
+        font-weight: bold;
+        margin-top: 10px;
+        color: purple;
+
+        i {
+            color: rgb(203, 108, 203);
+        }
+    }
+}
