@@ -3,12 +3,12 @@ import FeatureList from '../feature/FeatureList'
 // import Slide from '../slide/Slide'
 import Footer from '../footer/Footer'
 import { Outlet, useLocation } from 'react-router-dom'
-import NavBarNotSignIn from '../navbar/NavBarNotSignIn'
+import NavBar from '../navbar/NavBar'
 
-const Home = () => {
+const HomeSignIn = () => {
   return (
     <div>
-      <NavBarNotSignIn />
+      <NavBar />
       <FeatureList />
       {/* <Slide /> */}
       <Footer />
@@ -16,4 +16,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeSignIn

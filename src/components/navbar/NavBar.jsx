@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const NavBar = () => {
   const navigate = useNavigate();
   const handleClickLogOut = () => {
-    navigate('/notsignin');
+    navigate('/');
   }
   return (
     <>
