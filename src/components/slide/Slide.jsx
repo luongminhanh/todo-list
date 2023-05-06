@@ -1,7 +1,7 @@
 import React from 'react'
 import '../scss/Slide.scss'
 import img from '../../assets/feedback.png'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel'
 
 const Slide = () => {
