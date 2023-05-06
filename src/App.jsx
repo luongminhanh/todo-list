@@ -1,6 +1,4 @@
 import 'react-toastify/dist/ReactToastify.css';
-import NavBar from './components/navbar/NavBar'
-import NavBarNotSignIn from './components/navbar/NavBarNotSignIn'
 import { Route, Routes } from 'react-router-dom';
 import Home from './components/page/Home';
 import SignIn from './components/page/SignIn';

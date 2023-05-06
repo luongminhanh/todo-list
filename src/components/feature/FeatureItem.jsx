@@ -1,5 +1,5 @@
 import React from 'react'
-import './Feature.scss'
+import '../scss/Feature.scss'
 
 const FeatureItem = (props) => {
   return (

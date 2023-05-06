@@ -1,5 +1,5 @@
 import React from 'react'
-import './NavBar.scss'
+import '../scss/NavBar.scss'
 import imgHomePage from '../../assets/home-image.png'
 import { NavLink, useNavigate } from 'react-router-dom'
 const NavBar = () => {

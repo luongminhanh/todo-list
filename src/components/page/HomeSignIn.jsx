@@ -1,8 +1,7 @@
 import React from 'react'
 import FeatureList from '../feature/FeatureList'
-// import Slide from '../slide/Slide'
+import Slide from '../slide/Slide'
 import Footer from '../footer/Footer'
-import { Outlet, useLocation } from 'react-router-dom'
 import NavBar from '../navbar/NavBar'
 
 const HomeSignIn = () => {
@@ -10,7 +9,7 @@ const HomeSignIn = () => {
     <div>
       <NavBar />
       <FeatureList />
-      {/* <Slide /> */}
+      <Slide />
       <Footer />
     </div>
   )

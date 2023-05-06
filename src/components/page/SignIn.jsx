@@ -1,5 +1,4 @@
 import React from 'react';
-import './SignIn.scss'
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
@@ -30,7 +29,7 @@ const SignIn = () => {
         )
         .catch(error => {
           console.log(error);
-          navigate("/notsignin");
+          navigate("/");
         }
         )
     }
@@ -44,25 +43,6 @@ const SignIn = () => {
           <div className='nav-bar_logo-tall'></div>
         </div>
       </div>
-      {/* <div className='w-full h-full flex justify-center items-center'>
-        <div>
-          <div>
-            <h1>Sign In</h1>
-            <form>
-              <label>
-                Username
-              </label>
-              <input
-                type="text"
-                className='border border-spacing-1'
-              ></input>
-              <button
-                // onClick={handleClick}
-                className='w-full bg-purple-500 text-white rounded-[30px]'>Sign In</button>
-            </form>
-          </div>
-        </div> */}
-    {/* </div > */}
     <form
             onSubmit={formik.handleSubmit}
             className='p-10 w-full max-w-[500px] mx-auto'
