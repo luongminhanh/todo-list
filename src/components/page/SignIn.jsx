@@ -17,8 +17,14 @@ const SignIn = () => {
     onSubmit: async () => {
       try {
         const response = await axios.post("https://test-react.agiletech.vn/auth/login", formik.values)
-        if (response.data.code == 401) navigate("/");
-        else navigate("/signin");
+        if (response.data.code == 401) {
+          alert("Wrong username!");
+          navigate("/");
+        } 
+        else {
+          alert("Login successfully!");
+          navigate("/signin");
+        }
       }
       catch (error) {
         console.log(error);
