@@ -14,26 +14,15 @@ const SignIn = () => {
       username: Yup.string()
         .required("Required")
     }),
-    onSubmit: () => {
-      fetch('https://test-react.agiletech.vn/Auth/login',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(formik.values)
-        }
-      )
-        .then(res => {
-          console.log(res);
-          navigate("/signin");
-        }
-        )
-        .catch(error => {
-          console.log(error);
-          navigate("/");
-        }
-        )
+    onSubmit: async () => {
+      try {
+        const response = await axios.post("https://test-react.agiletech.vn/auth/login", formik.values)
+        if (response.data.code == 401) navigate("/");
+        else navigate("/signin");
+      }
+      catch (error) {
+        console.log(error);
+      }
     }
   })
 
