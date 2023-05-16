@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import FeatureItem from './FeatureItem'
-import '../scss/Feature.scss'
+import '../../assets/sass/scss/Feature.scss'
 import axios from 'axios'
 
 const FeatureList = () => {

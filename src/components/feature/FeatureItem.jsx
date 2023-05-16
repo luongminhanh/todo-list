@@ -1,5 +1,4 @@
 import React from 'react'
-import '../scss/Feature.scss'
 
 const FeatureItem = (props) => {
   const { description, imageUrl } = props;

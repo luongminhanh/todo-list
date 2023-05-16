@@ -1,6 +1,6 @@
 import React from 'react'
-import FeatureList from '../feature/FeatureList'
-import Slide from '../slide/Slide'
+import FeatureList from '../components/feature/FeatureList'
+import Slide from '../components/slide/Slide'
 
 const Content = () => {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
-import '../scss/Slide.scss'
-import img from '../../assets/feedback.png'
+import '../../assets/sass/scss/Slide.scss'
+import img from '../../assets/pictures/feedback.png'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 import { Carousel } from 'react-responsive-carousel'
 
