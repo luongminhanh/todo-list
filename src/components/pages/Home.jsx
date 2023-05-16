@@ -2,12 +2,12 @@ import React from 'react'
 import FeatureList from '../feature/FeatureList'
 import Slide from '../slide/Slide'
 import Footer from '../footer/Footer'
-import NavBarNotSignIn from '../navbar/NavBarNotSignIn'
+import NavBar from '../navbar/NavBar'
 
 const Home = () => {
   return (
     <div>
-      <NavBarNotSignIn />
+      <NavBar />
       <FeatureList />
       <Slide />
       <Footer />

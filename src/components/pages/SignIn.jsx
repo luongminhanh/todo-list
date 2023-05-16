@@ -19,11 +19,13 @@ const SignIn = () => {
         const response = await axios.post("https://test-react.agiletech.vn/auth/login", formik.values)
         if (response.data.code == 401) {
           alert("Wrong username!");
-          navigate("/");
         } 
         else {
+          const accessToken = response.data.accessToken;
+          console.log(accessToken);
+          localStorage.setItem('accessToken', accessToken);
           alert("Login successfully!");
-          navigate("/signin");
+          navigate("/");
         }
       }
       catch (error) {
@@ -45,7 +47,7 @@ const SignIn = () => {
         className='p-10 w-full max-w-[500px] mx-auto'
         autoComplete="off">
         <div className='flex flex-col gap-4'>
-          <label htmlFor="usename">Username</label>
+          <label htmlFor="usename" className='text-xl'>Username</label>
           <input
             className='p-6 rounded-sm border border-gray-400'
             type="text"
@@ -56,7 +58,7 @@ const SignIn = () => {
           {formik.touched.username && formik.errors.username ? <div className='text-red-500'>{formik.errors.username}</div> : null}
         </div>
         <div>
-          <button type="submit" className='w-full p-3 bg-blue-500 my-5 text-white rounded-lg'>Submit</button>
+          <button type="submit" className='w-full p-3 bg-purple-600 my-5 text-white text-xl rounded-full'>Submit</button>
         </div>
       </form>
     </>
