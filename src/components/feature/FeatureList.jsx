@@ -4,7 +4,7 @@ import '../../assets/sass/scss/Feature.scss'
 import axios from 'axios'
 
 const FeatureList = () => {
-  const [FeatureData, setFeatureData] = useState([]);
+  const [featureData, setFeatureData] = useState([]);
   useEffect(() => {
     axios.get("https://test-react.agiletech.vn/galleries")
       .then(response => {
@@ -20,7 +20,7 @@ const FeatureList = () => {
         <h1>Feature</h1>
         <span>Some of the features and advantages that we provide for those of you who store data in this Data Warehouse.</span>
         <div className='feature-list-item'>
-          {FeatureData.length > 0 && FeatureData.map(item =>
+          {featureData.length > 0 && featureData.map(item =>
             <FeatureItem key={item.id} description={item.desctiption} imageUrl={item.imageUrl} />
           )}
         </div>

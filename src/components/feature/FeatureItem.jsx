@@ -1,7 +1,6 @@
 import React from 'react'
 
-const FeatureItem = (props) => {
-  const { description, imageUrl } = props;
+const FeatureItem = ({ description, imageUrl }) => {
   return (
     <div class="feature-item">
       <img src={imageUrl} alt=''></img>
